@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic" rel="stylesheet" />
+    
+    <style>
+        h1{
+            background-color: red;
+            color: white;
+
+        }
+
+        h2{
+            background-color: blueviolet;
+        }
+
+        p{
+            font-weight:700 ;
+        }
+
+        div p{
+            color: red;
+        }
+
+        h1, h2, p,a{
+            font-family: Ubuntu;
+        }
+
+        .mytag{
+            /* style : dotted/dashed/double*/
+            text-decoration: overline dashed purple 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>internal css is used design whole page at once</h1>
+    <h2 style="font-size: 50px: background-color: violet;">internal css is recommanded whole website</h2>
+    <h2 class="mytag tag">internal css can be overriden by inline css</h2>
+    <div>
+        <p class="mytag ">inside the div tag</p>
+    </div>
+    <p>outside the div tag</p>
+
+    <a style="font-family: fantasy;" href="">it an anchor tag</a>
+
+</body>
+</html>

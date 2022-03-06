@@ -1,0 +1,18 @@
+.chat-area {
+    height: 80vh;
+}
+
+.chat-card {
+    background : #ffdc9a;
+}
+.message-box {
+    border: 1px solid red;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    width: fit-content;
+    max-width: 80%;
+  }
+  
+  .message-text {
+    margin: 0;
+  }

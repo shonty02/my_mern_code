@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic" rel="stylesheet" />
+    <style>
+        *{
+            font-family: Ubuntu;
+        }
+
+        .mycard{
+            width: 400px;
+            margin: 20vh auto;
+            border-radius: 10px;
+            background: white;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 2px 5px 10px 2px rgba(0, 0, 0, 0.185) ;
+        }
+
+        .text-input{
+            margin-top: 10px;
+            box-sizing: border-box;
+            background: #c8c8c8;
+            box-shadow: inset -1px -1px 2px 0px rgba(0, 0, 0, 0.185);
+        }
+
+        body{
+            background: linear-gradient(108deg, rgba(210,210,255,0.315), rgba(255, 0, 0, 0.310)) no-repeat,
+                        url(back.jpg) center;
+            background-size: cover;
+            height: 80vh;
+        }
+
+        .mybtn{
+            margin: 30px 0;
+            background: #3877ba;
+            color: white;
+        }
+
+        .text-input , .mybtn{
+            display: block;
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        .avatar{
+            margin: auto;
+            display: block;
+            width: 150px;
+            margin-top: -100px;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="mycard">
+        <img class="avatar" src="avatar2.png" alt="">
+        <h3 style="text-align: center;">User Log In</h3>
+
+        <form>
+        <input class="text-input" placeholder="Username">
+        <input class="text-input" type="password" placeholder="Password">
+        <button class="mybtn">SUBMIT</button>
+        </form>
+    </div>
+</body>
+</html>
