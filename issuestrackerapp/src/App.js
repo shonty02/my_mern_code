@@ -1,11 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Login from "./components/login";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+
+import { BrowserRouter, Link, Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/header";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { useState } from "react";
+import Signup from "./components/signup";
+import addTeam from "./components/addTeam";
+
 import { UserProvider } from "./userContext";
+import AddTeam from "./components/addTeam";
+import TeamDashboard from "./components/teamDashboard";
+import Home from "./components/home";
+import ManageIssues from "./components/manageIssues";
 
 function App() {
   const [darktheme, setDarktheme] = useState(false);
@@ -40,6 +48,15 @@ function App() {
 
             <Routes>
               <Route element={<Login />} path="/login" />
+              <Route element={<Signup />} path="/signup" />
+              <Route element={<AddTeam />} path="/addteam" />
+              <Route element={<TeamDashboard />} path="/teamdash" />
+              <Route element={<Home />} path="/home" />
+              <Route element={<ManageIssues />} path="/manageissues" />
+
+
+              <Route element={<Navigate to="/login" />} path="" />
+              <Route element={<Navigate to="/login" />} path="" />
             </Routes>
           </BrowserRouter>
         </ThemeProvider>

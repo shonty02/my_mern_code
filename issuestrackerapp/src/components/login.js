@@ -8,6 +8,7 @@ import {
   } from "@mui/material";
   import { Formik } from "formik";
   import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
   import Swal from "sweetalert2";
   import app_config from "../config";
   import { UserContext } from "../userContext";
@@ -16,6 +17,7 @@ import {
     const url = app_config.api_url;
   
     const { setCurrentUser, setLoggedin } = useContext(UserContext);
+    const navigate = useNavigate();
   
     const loginForm = {
       username: "",
@@ -58,6 +60,7 @@ import {
           setCurrentUser(data);
           // storing value in session
           sessionStorage.setItem("user", JSON.stringify(data));
+          navigate('/teamdash')
         });
     };
   
