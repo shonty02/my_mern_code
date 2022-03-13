@@ -56,7 +56,7 @@ function App() {
 
 
               <Route element={<Navigate to="/login" />} path="" />
-              <Route element={<Navigate to="/login" />} path="" />
+
             </Routes>
           </BrowserRouter>
         </ThemeProvider>

@@ -14,21 +14,21 @@ const TeamDashboard = () => {
     ]);
   
     useEffect(() => {
-      newteam.connect();
+      newTeam.connect();
     }, []);
   
     // subscribing the event
     team.on("recnewteam", (data) => {
       console.log(data);
-      setNewTeamList([...newteamList, data]);
+      setnewTeam([...newteamList, data]);
     });
 
     const newTeam = () => {
         let obj = { text: newteam, sent: true };
         newteam.emit("addteam", obj);
     
-        setNewTeam([...newTeamList, obj]);
-        setNewTeam("");
+        setnewTeam([...newTeamList, obj]);
+        setnewTeam("");
       };
 
         return (
@@ -42,8 +42,8 @@ const TeamDashboard = () => {
                   <input
                    className="form-control"
                    placeholder="Enter Team Name Here..."
-                   onChange={(e) => teamDashboard(e.target.value)}
-                   value={teamDashboard}
+                   onChange={(e) => newTeamList(e.target.value)}
+                   value={newteamlist}
                   />
                     
                   <Button variant="contained" onClick={teamDashboard}>
